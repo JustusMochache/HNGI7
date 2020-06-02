@@ -1,0 +1,15 @@
+{{#partial "content"}}
+
+    <h1>{{thisAuthor.authorName}}</h1>
+    <p>Here's a list of all the books's written <strong>{{thisAuthor.authorName}}</strong>:</p>
+    <ol>
+        {{#each authorBooks}}
+        <li>
+            <h4>{{bookName}} <small>{{noOfPages}} Pages | <span class="text-success">{{availability}}</span></small></h4>
+            <p>{{description}}</p>
+        </li>
+        {{/each}}
+    </ol>
+{{/partial}}
+
+{{> layout.hbs}}
